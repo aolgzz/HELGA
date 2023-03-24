@@ -1,5 +1,5 @@
 // HELGA: High Efficient Generic dAta structure library
-// Helga Chain v.2.3.1
+// Helga Chain v.2.3.2
 // (Singly Linked List)
 // Copyright 2023 (c) Acutis Data Structure Corporation.
 
@@ -334,7 +334,6 @@ namespace helga{
     find(const T& data): returns the position of the first occurrence of data in the linked list (or size() if data is not in the list).
     remove(const T& data): removes the first occurrence of data in the linked list.
     remove_all(const T& data): removes all occurrences of data in the linked list.
-    clear(): removes all nodes from the linked list and resets the chain_size to zero.
     splice(size_t pos, const chain& other): inserts the elements of the other linked list into this linked list starting at position pos.
     splice(size_t pos, const chain& other, size_t first, size_t last): inserts a range of elements from the other linked list into this linked list starting at position pos.
     merge(chain& other): merges the other linked list into this linked list, assuming both linked lists are sorted in ascending order.
@@ -344,7 +343,6 @@ namespace helga{
 
     split(size_t pos): splits the linked list into two separate linked lists, with the first list containing elements up to position pos and the second list containing the remaining elements.
     partition(const T& data): rearranges the linked list such that all elements less than data come before elements greater than or equal to data.
-    rotate(int n): rotates the linked list by n positions to the right (positive n) or left (negative n).
     swap_pairs(): swaps the positions of adjacent pairs of elements in the linked list.
     unique_sorted(): removes consecutive duplicate elements from the linked list, assuming that the list is already sorted in ascending order.
     minmax(): returns a pair of iterators pointing to the minimum and maximum elements in the linked list, respectively.
@@ -354,8 +352,6 @@ namespace helga{
     is_sorted(): returns true if the linked list is sorted in ascending order, and false otherwise.
     to_vector(): returns a std::vector containing the elements of the linked list in the order they appear in the list.
     to_forward_list(): returns a std::forward_list containing the elements of the linked list in the order they appear in the list.
-    slice(size_t start, size_t end): returns a new linked list containing a copy of the elements of the original linked list from positions start to end (inclusive).
-
     replace_all(const T& old_data, const T& new_data): replaces all occurrences of old_data with new_data in the linked list.
 
 */
