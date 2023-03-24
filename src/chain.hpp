@@ -1,5 +1,5 @@
 // HELGA: High Efficient Generic dAta structure library
-// Helga Chain v.2.3.2
+// Helga Chain v.2.4.2
 // (Singly Linked List)
 // Copyright 2023 (c) Acutis Data Structure Corporation.
 
@@ -283,7 +283,28 @@ namespace helga{
                     return true;
                 }
             }
-            
+
+            /*
+                size_t find(const T& data)
+
+                Return the position of the first occurrence of data in the chain or 0 if data is not in the list.
+            */
+            size_t find(const T& data){
+                if(head == nullptr && chain_size == 0){
+                    return 0;
+                }
+                
+                size_t pos = 0;
+                node<T>* traversal = head;
+                for(size_t i{0}; i<chain_size; i++){
+                    if(traversal->data() == data ){
+                        return pos+=1;
+                    }traversal = traversal->next();
+                    pos++;
+                }
+
+                return 0;
+            }
             //I/O
             void pretty_print() {
                 int max_len = 2;
@@ -330,8 +351,6 @@ namespace helga{
 #endif/*CHAIN_HPP*/
 
 /*
-
-    find(const T& data): returns the position of the first occurrence of data in the linked list (or size() if data is not in the list).
     remove(const T& data): removes the first occurrence of data in the linked list.
     remove_all(const T& data): removes all occurrences of data in the linked list.
     splice(size_t pos, const chain& other): inserts the elements of the other linked list into this linked list starting at position pos.
