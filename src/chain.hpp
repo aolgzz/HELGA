@@ -1,4 +1,4 @@
-// HELGA: High Efficient Generic dAta structure library
+// HELGA: High Efficiency Generic dAta structure library
 // Helga Chain v.2.4.2
 // (Singly Linked List)
 // Copyright 2023 (c) Acutis Data Structure Corporation.

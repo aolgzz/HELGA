@@ -1,4 +1,4 @@
-// HELGA: High Efficient Generic dAta structure library
+// HELGA: High Efficiency Generic dAta structure library
 // Copyright 2023 (c) Acutis Data Structure Corporation.
 
 #pragma once //Not supported by all compilers
